@@ -1,0 +1,282 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <header id="header" class="banner">
+        <div class="container container_no-padding">
+            <nav class="navbar navbar-default navbar-opaque">
+                <div class="masthead">
+                    <div class="masthead__logos">
+                        <div class="masthead__left">
+                            <a href="{{ site.url }}">
+                                <img src="./images/cki_wordmark.png"
+                                alt="CKI">
+                            </a>
+                        </div>
+
+                        <div class="masthead__right">
+                            <img src="./images/cnh_district_emblem.png"
+                            alt="California-Nevada-Hawaii District of Circle K International">
+                        </div>
+                    </div>
+
+                    <img class="masthead_stripes" style="width: 100%; margin-top: -5px;" 
+                    src="./images/navy_stripes.png"
+                    alt="masthead stripes">
+                </div>
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#primary-nav" aria-expanded="false">
+                </button>
+            </div>
+
+            <!-- moved this css to assets/styles/_header.scss but not sure if it's working there -->
+            <style>
+                .child_dropdown-menu{
+                    display: none;
+                    list-style-type: none;
+                    color: #0C1871;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                }
+                .child_dropdown:hover .child_dropdown-menu{
+                    display: block;
+                }
+
+                /* on mouse pointer screens open dropdown on hover */
+                @media(pointer: fine) {
+                    .dropdown:hover .dropdown-menu1{
+                        display: block;
+                    }
+                }
+
+                /* on touch screens automatically open nested dropdowns */
+                @media(pointer: coarse) {
+                    .child_dropdown-menu{
+                        display: block;
+                    }
+                }
+            </style>
+
+            <div class="collapse navbar-collapse" id="primary-nav">
+                <ul class="nav navbar-nav">
+                    <li class="{{ item.classes | join(' ') }} dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">Happy </a>
+                    </li>
+                    <li class="{{ item.classes | join(' ') }} dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">Birthday </a>
+                    </li>
+                    <li class="{{ item.classes | join(' ') }} dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">Jennifer! </a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+</header>
+
+
+<div id="front-page">
+    <section class="hero">
+        <div class="container">
+              <div class="container-fluid" id="announcements">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-2 col-sm-offset-3 text-center">
+                    <img class="img-responsive img-center" src="./images/Terrence.jpg">
+                  </div>
+                  <div class="col-sm-2 text-center">
+                    <img class="img-responsive img-center" src="./images/Alvin.jpeg">
+                  </div>
+                  <div class="col-sm-2 text-center">
+                    <img class="img-responsive img-center" src="./images/Renz.jpeg">
+                  </div>
+                  
+                  
+                </div>
+                <div class="row seven-cols">
+                <div class="col-sm-1 text-center">
+                    <img class="img-responsive img-center" src="./images/Matthew.jpg">
+                  </div>
+                <div class="col-sm-1 text-center">
+                    <img class="img-responsive img-center" src="./images/Tate.jpg">
+                  </div>
+                  <div class="col-sm-1 text-center">
+                    <img class="img-responsive img-center" src="./images/Allison.jpg">
+                  </div>
+                  <div class="col-sm-1 text-center">
+                    <img class="img-responsive img-center" src="./images/Albert.jpeg">
+                  </div>
+                  <div class="col-sm-1 text-center">
+                    <img class="img-responsive img-center" src="./images/Chris.jpeg">
+                  </div>
+                  <div class="col-sm-1 text-center">
+                    <img class="img-responsive img-center" src="./images/Stella.jpg">
+                  </div>
+                  <div class="col-sm-1 text-center">
+                    <img class="img-responsive img-center" src="./images/Tiffany.jpeg">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="we-support" class="text-center">
+        <div class="container">
+            <div class="we-support__wrapper">
+                <div class="we-support__header">
+                    From the 2019-2020 Technology Committee
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="row">
+        <div class="container">
+            <div class="col-md-8">
+                <h2>Notes</h2>
+
+                <article class="teaser panel panel-default">
+                    <div class="panel-body">
+                        <h3>Happy Bday Jennifer! Hope it's a great one despite quarantine :)</h3>
+
+                    </div>
+                    <div class="panel-footer clearfix">
+                        <div class="teaser__author">Posted by <a
+                            href="{{ post.author.link }}">Tiffany Feng</a></div>
+
+                            <a href="" class="btn btn-primary btn-sm pull-right">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="teaser panel panel-default">
+                    <div class="panel-body">
+                        <h3>HAPPY BIRTHDAY JENNIFER!!! Thanks for letting us use your place for the last in person. Also thanks for the secret Santa gift, having two blankets has actually been pretty nice LOL</h3>
+
+                    </div>
+                    <div class="panel-footer clearfix">
+                        <div class="teaser__author">Posted by <a
+                            href="{{ post.author.link }}">Allison Chu</a></div>
+
+                            <a href="" class="btn btn-primary btn-sm pull-right">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="teaser panel panel-default">
+                    <div class="panel-body">
+                        <h3>Happy Birthday Jennifer!! Honestly it was so great getting to know you more this term!! You’re really cool and even tho you have strict Asian parents, you still came out to the inpersons and we bonded pretty well, and also that’s again for offering up your apartment!! Hope you have a good one and maybe we’ll still keep in touch! :)
+</h3>
+
+                    </div>
+                    <div class="panel-footer clearfix">
+                        <div class="teaser__author">Posted by <a
+                            href="{{ post.author.link }}">Alvin Nguyen</a></div>
+
+                            <a href="" class="btn btn-primary btn-sm pull-right">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="teaser panel panel-default">
+                    <div class="panel-body">
+                        <h3>Happy birthday Jennifer!! For the past year, it was very nice to work with you haha even though we did not really work on the same project. But thank you so much for offering your place during our in-person! Congratulation on your graduation as well!! Hope the quarantine won't affect too much of your plan!!</h3>
+
+                    </div>
+                    <div class="panel-footer clearfix">
+                        <div class="teaser__author">Posted by <a
+                            href="{{ post.author.link }}">Stella Liang</a></div>
+
+                            <a href="" class="btn btn-primary btn-sm pull-right">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="teaser panel panel-default">
+                    <div class="panel-body">
+                        <h3>Hey Jennifer! I hope you had a great birthday! Serving on the Tech committee with you last term was definitely a great experience and is something that I will cherish for as long as I can. Another thank you as well of winter in person! We definitely couldn't have the experience that we as a committee did without your hospitality so thank you for providing us the availability to have those memories!</h3>
+
+                    </div>
+                    <div class="panel-footer clearfix">
+                        <div class="teaser__author">Posted by <a
+                            href="{{ post.author.link }}">Matthew Kim</a></div>
+
+                            <a href="" class="btn btn-primary btn-sm pull-right">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="teaser panel panel-default">
+                    <div class="panel-body">
+                        <h3>Happy birthday Jennifer!! 🎂🥳</h3>
+
+                    </div>
+                    <div class="panel-footer clearfix">
+                        <div class="teaser__author">Posted by <a
+                            href="{{ post.author.link }}">Tate Yeung</a></div>
+
+                            <a href="" class="btn btn-primary btn-sm pull-right">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="teaser panel panel-default">
+                    <div class="panel-body">
+                        <h3>Happy birthday Jennifer! Hope the end of the school year treats you well and you can find a way to celebrate properly once quarantine is over ;_;</h3>
+
+                    </div>
+                    <div class="panel-footer clearfix">
+                        <div class="teaser__author">Posted by <a
+                            href="{{ post.author.link }}">Terrence James Diaz</a></div>
+
+                            <a href="" class="btn btn-primary btn-sm pull-right">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="teaser panel panel-default">
+                    <div class="panel-body">
+                        <h3>Happy birthday Jennifer!</h3>
+
+                    </div>
+                    <div class="panel-footer clearfix">
+                        <div class="teaser__author">Posted by <a
+                            href="{{ post.author.link }}">Albert Dang</a></div>
+
+                            <a href="" class="btn btn-primary btn-sm pull-right">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="teaser panel panel-default">
+                    <div class="panel-body">
+                        <h3>Happy birthday Jen!! I always enjoy car talks with you, and I do miss you and us being able to chat more! I hope your birthday is as amazing as you! (:</h3>
+
+                    </div>
+                    <div class="panel-footer clearfix">
+                        <div class="teaser__author">Posted by <a
+                            href="{{ post.author.link }}">Renz Lane</a></div>
+
+                            <a href="" class="btn btn-primary btn-sm pull-right">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="teaser panel panel-default">
+                    <div class="panel-body">
+                        <h3>Woooo happy birthday! I appreciate you joining us for your your graduating year and all the hard work you always put in. It was a great year; also as part thank-you for housing us for in-person and part birthday present, a gift is shipping to your address (undetermined date of arrival sorry). I hope you were still able to celebrate this occassion despite the quarantine! 🎉🎉🎉</h3>
+
+                    </div>
+                    <div class="panel-footer clearfix">
+                        <div class="teaser__author">Posted by <a
+                            href="{{ post.author.link }}">Chris Lam</a></div>
+
+                            <a href="" class="btn btn-primary btn-sm pull-right">Read More</a>
+                        </div>
+                    </article>
+                    <a href="" class="btn btn-primary btn-md">More Posts</a> <br><br>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</body>
